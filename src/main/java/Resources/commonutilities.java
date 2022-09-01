@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 
 public class commonutilities {
+	//dropdownXpath is added
 	public static void dropdownhandle(WebElement dropdownXpath, int index) {
 		Select s=new Select (dropdownXpath);
 		s.selectByIndex(index);
