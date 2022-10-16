@@ -25,9 +25,10 @@ public class CountrywiseProductDetailslinkvalidity extends BaseClass {
 		pdo.WorldWidebutton().click();
 		//driver.findElement(By.xpath("//div[@class='surround btn btn-outline-primary border-white']")).click();
 		List<WebElement> links=pdo.Links();
+		System.out.println("No. of links :"+" "+links.size());
 		//List<WebElement> links=driver.findElements(By.xpath("//ul[@class='generic-links  ']//a"));
 		SoftAssert a =new SoftAssert(); 
-
+		  
         for(WebElement link : links)
         {
             String url= link.getAttribute("href");
@@ -38,7 +39,10 @@ public class CountrywiseProductDetailslinkvalidity extends BaseClass {
             System.out.println(respCode);
            a.assertTrue(respCode<400, "The link with Text"+link.getText()+" is broken with code" +respCode);
         }
+        
        a.assertAll();
+       
+       driver.quit();
 
 		
 	}

@@ -17,7 +17,7 @@ public class BaseClass {
 	public WebDriver browserlaunch() throws IOException {
 		
 		//this will help us read data.properties file
-		FileInputStream fis=new FileInputStream("C:\\Users\\sansidson\\eclipse-workspace\\20testNGFramework\\src\\main\\java\\Resources\\data.properties");
+		FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
 		
 		//this will access data.properties file
 	    prop=new Properties();

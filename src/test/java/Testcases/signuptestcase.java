@@ -41,6 +41,8 @@ public class signuptestcase extends BaseClass {
 	
 	
 	
+	driver.quit();
+	
 	
 		
 
