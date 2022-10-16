@@ -27,6 +27,9 @@ public class verifylogintestcase extends BaseClass {
 		
 		commonutilities.handleassertions(actual, expected);
 		
+		
+		
+		driver.quit();
 	}
 	
 
