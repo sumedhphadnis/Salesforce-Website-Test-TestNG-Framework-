@@ -35,6 +35,7 @@ public class BaseClass {
 	@BeforeMethod
 	public void simultaneouslaunchbrowser() throws IOException {
 		browserlaunch();
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
 		
 	}
